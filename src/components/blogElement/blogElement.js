@@ -1,21 +1,34 @@
-import React from "react";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import React from 'react'
+import { StaticImage } from 'gatsby-plugin-image'
 
-import * as style from "./style";
+import * as style from './style'
 
-function BlogElement({ data }) {
-  const { imagePath, title, alt } = data.frontmatter;
-  const image = getImage(imagePath);
-
+function BlogElement({ title, summary, tags = [] }) {
   return (
-    <style.BlogElement>
-      <GatsbyImage image={image} alt={title}></GatsbyImage>
-      <style.blogText>
-        <p>{title}</p>
-        <p>{alt}</p>
-      </style.blogText>
-    </style.BlogElement>
-  );
+    <>
+      <style.blogContainer>
+        <style.blogImage>
+          <StaticImage
+            src="https://picsum.photos/250/200"
+            alt="Test Image Blog"
+            placeholder="blurred"
+            layout="constrained"
+            width={150}
+            height={100}
+          />
+        </style.blogImage>
+        <style.blogTitle>
+          <p>{title}</p>
+          <style.tagContainer>
+            {tags.map((t) => {
+              return <style.tag>{t}</style.tag>
+            })}
+          </style.tagContainer>
+        </style.blogTitle>
+        <style.blogText className="blogText">{summary}</style.blogText>
+      </style.blogContainer>
+    </>
+  )
 }
 
-export default BlogElement;
+export default BlogElement

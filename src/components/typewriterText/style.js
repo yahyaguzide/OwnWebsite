@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const TerminalPrompt = styled.div`
   display: inline-block;
-  font-family: "inconsolata", monospace;
+  font-family: 'inconsolata', monospace;
   font-size: 2em;
   margin-left: 1em;
   margin-right: 0.5em;
@@ -12,11 +12,11 @@ export const TerminalPrompt = styled.div`
   span:last-child {
     color: #839496;
   }
-`;
+`
 
 export const TerminalContainer = styled.div`
   display: inline-block;
-  font-family: "inconsolata", monospace;
+  font-family: 'Source Code Pro', monospace;
   font-size: 2em;
 
   @keyframes typing {
@@ -58,4 +58,4 @@ export const TerminalContainer = styled.div`
       blinkingCursor 1s infinite;
     animation-delay: var(--delay);
   }
-`;
+`
