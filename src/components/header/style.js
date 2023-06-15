@@ -1,12 +1,7 @@
-import styled from "styled-components";
-
-export const Heading = styled.h1`
-  font-family: "inconsolata", monospace;
-  font-size: 2em;
-`;
+import styled from 'styled-components'
 
 export const HeaderContainer = styled.div`
-  display: block;
+  display: inline-block;
   padding-top: 1em;
   padding-bottom: 1em;
-`;
+`
