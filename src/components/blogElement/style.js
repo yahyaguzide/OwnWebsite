@@ -1,8 +1,9 @@
 import styled from 'styled-components'
+import device from '../../utils/deviceSize'
 
 export const blogContainer = styled.div`
   display: block;
-  width: 25em;
+  min-width: 10em;
   min-height: 100px;
   max-height: 100px;
   margin-bottom: 1em;

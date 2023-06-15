@@ -18,12 +18,12 @@ function Layout({ children }) {
         <span
           style={{ float: 'right', backgroundColor: 'yellow', padding: '1em' }}
         >
-          Hasdddddddddddddddddlo
+          NavButton Proto
         </span>
       </div>
       <style.layoutContainer>
         <div>{children}</div>
-        <style.sidePanelContainer>
+        <style.sidePanelContainer className="grid-item">
           <SidePanel />
         </style.sidePanelContainer>
       </style.layoutContainer>
